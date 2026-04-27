@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/National-Honor-Society-Logo.png";
 
-const NavBar = ({ page }) => {
+const NavBar = ({ page }: { page: string }) => {
   return (
     <div className="border-bottom shadow-sm">
       <div className="d-flex justify-content-between align-items-center px-3">

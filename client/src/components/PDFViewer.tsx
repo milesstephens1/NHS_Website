@@ -1,8 +1,8 @@
 import { Document, Page } from "react-pdf";
 import { useState } from "react";
 
-const PDFViewer = ({ file }) => {
-  const [numPages, setNumPages] = useState(null);
+const PDFViewer = ({ file }: { file: string }) => {
+  const [numPages, setNumPages] = useState<number | null>(null);
 
   return (
     <div>

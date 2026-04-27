@@ -1,22 +1,21 @@
 import { useState } from "react";
 import { Calendar } from "react-calendar";
 
-const activitiesData = {
+const activitiesData: Record<string, string[]> = {
   "2026-04-23": ["NHS Meeting @ 3:00pm ", "Hours Sheets Due"],
   "2026-04-25": ["Impact Award"],
   "2026-04-27": ["Operation Kindness Field Trip"],
 };
 
 const CalenderApp = () => {
-  const [date, setDate] = useState(new Date());
-  const [selectedActivity, setSelectedActivity] = useState(null);
+  const [date, setDate] = useState<Date>(new Date());
 
-  const formatDateKey = (d) => {
+  const formatDateKey = (d: Date): string => {
     const local = new Date(d);
     local.setMinutes(local.getMinutes() - local.getTimezoneOffset());
     return local.toISOString().split("T")[0];
   };
-  const hasActivity = (date) => {
+  const hasActivity = (date: Date): boolean => {
     return activitiesData[formatDateKey(date)]?.length > 0;
   };
 
@@ -32,9 +31,13 @@ const CalenderApp = () => {
             </div>
             <div className="card-body">
               <Calendar
-                onChange={(newDate) => {
-                  setDate(newDate);
-                  setSelectedActivity(null); // Reset activity selection
+                onChange={(value) => {
+                  if (value) {
+                    const newDate = Array.isArray(value) ? value[0] : value;
+                    if (newDate) {
+                      setDate(newDate);
+                    }
+                  }
                 }}
                 value={date}
                 className="border-0 w-100 big-calendar"
@@ -53,7 +56,7 @@ const CalenderApp = () => {
             <div className="card-body">
               {activities.length > 0 ? (
                 <ul className="list-group">
-                  {activities.map((activity, index) => (
+                  {activities.map((activity: string, index: number) => (
                     <li key={index} className="list-group-item">
                       {activity}
                     </li>
