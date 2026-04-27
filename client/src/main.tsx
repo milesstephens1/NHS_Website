@@ -8,8 +8,9 @@ import "./index.css";
 import App from "./App.tsx";
 
 import { pdfjs } from "react-pdf";
+import workerSrc from "pdfjs-dist/build/pdf.worker.min.js?url";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
