@@ -12,8 +12,8 @@ const Calender = () => {
       <div>
         <h3 className="container text-center mt-5">
           For Further Information Information, Please Join the{" "}
-          <a>
-            <u>Google Classroom</u>
+          <a href="https://classroom.google.com/c/ODEyMDk0MzQ1Njk5?cjc=lbxgxrhe">
+            Google Classroom
           </a>
         </h3>
       </div>

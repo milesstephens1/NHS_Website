@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/National-Honor-Society-Logo.png";
+import logo from "../assets/images/National-Honor-Society-Logo.png";
 
 const NavBar = ({ page }) => {
   return (

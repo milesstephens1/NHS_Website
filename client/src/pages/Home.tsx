@@ -1,8 +1,8 @@
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import NavBar from "../components/NavBar";
-import pic1 from "../assets/National-Honor-Society-Logo.png";
-import pic2 from "../assets/plano-isd-academy-high-school-plano-tx.jpg";
-import pic3 from "../assets/hero.png";
+import pic1 from "../assets/images/processed-4D01AF52-E32C-4A78-A47F-55AA2B1C1CAA.jpeg";
+import pic2 from "../assets/images/processed-918DB7A9-6446-474F-8C54-8D711614A23F.jpeg";
+import pic3 from "../assets/images/IMG_20250918_153341.jpg";
 
 const Home = () => {
   return (
@@ -53,8 +53,7 @@ const Home = () => {
               </p>
               <ul>
                 <li>
-                  Minimum cumulative weighted GPA must be{" "}
-                  <mark>3.5 or higher</mark>
+                  Students must maintain a GPA of <mark>3.5 or higher</mark>
                 </li>
                 <li>Must be in good academic standing: i.e., passing</li>
               </ul>
@@ -81,9 +80,10 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Image carousel */}
         <div className="container w-50 mx-auto">
           <div
-            id="carouselExampleIndicators"
+            id="homeCarousel"
             className="carousel slide"
             data-bs-ride="carousel"
             data-bs-interval="3000"
@@ -91,7 +91,7 @@ const Home = () => {
             <div className="carousel-indicators">
               <button
                 type="button"
-                data-bs-target="#carouselExampleIndicators"
+                data-bs-target="#homeCarousel"
                 data-bs-slide-to="0"
                 className="active"
                 aria-current="true"
@@ -99,13 +99,13 @@ const Home = () => {
               ></button>
               <button
                 type="button"
-                data-bs-target="#carouselExampleIndicators"
+                data-bs-target="#homeCarousel"
                 data-bs-slide-to="1"
                 aria-label="Slide 2"
               ></button>
               <button
                 type="button"
-                data-bs-target="#carouselExampleIndicators"
+                data-bs-target="#homeCarousel"
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
               ></button>
@@ -116,6 +116,7 @@ const Home = () => {
                   src={pic1}
                   className="d-block w-100 object-fit-cover"
                   style={{ height: "400px" }}
+                  alt="group picture 1"
                 />
               </div>
               <div className="carousel-item">
@@ -123,6 +124,7 @@ const Home = () => {
                   src={pic2}
                   className="d-block w-100 object-fit-cover"
                   style={{ height: "400px" }}
+                  alt="group picture 2"
                 />
               </div>
               <div className="carousel-item">
@@ -130,13 +132,14 @@ const Home = () => {
                   src={pic3}
                   className="d-block w-100 object-fit-cover"
                   style={{ height: "400px" }}
+                  alt="group picture 3"
                 />
               </div>
             </div>
             <button
               className="carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#homeCarousel"
               data-bs-slide="prev"
             >
               <span
@@ -148,7 +151,7 @@ const Home = () => {
             <button
               className="carousel-control-next"
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#homeCarousel"
               data-bs-slide="next"
             >
               <span

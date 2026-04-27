@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Frankin-Gothic-Demi-Regular';
+  src: url('assets/fonts/franklin-gothic-demi-regular_Sf4KT/Franklin Gothic Demi Regular/Franklin Gothic Demi Regular.ttf') format('truetype');
+
+}
+
+* {
+  font-family: 'Frankin-Gothic-Demi-Regular', Helvetica, sans-serif;
+}

@@ -4,6 +4,7 @@ const Documents = () => {
   return (
     <div>
       <NavBar page="documents" />
+      <div>b</div>
     </div>
   );
 };

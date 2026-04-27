@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Calendar } from "react-calendar";
 
 const activitiesData = {
-  "2026-04-23": ["NHS Meeting", "Hours Sheets Due"],
+  "2026-04-23": ["NHS Meeting @ 3:00pm ", "Hours Sheets Due"],
   "2026-04-25": ["Impact Award"],
   "2026-04-27": ["Operation Kindness Field Trip"],
 };
