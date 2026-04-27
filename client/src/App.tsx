@@ -8,7 +8,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/NHS_Website">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/calender" element={<Calender />} />
